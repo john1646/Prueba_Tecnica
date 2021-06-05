@@ -1,5 +1,5 @@
 <?php
-include '/opt/lampp/htdocs/hospital/static/header.php';
+include '/opt/lampp/htdocs/hospital/DBmysql/model/TaskModel.php';
 $taskModel = new TaskModel();
 $tasks = $taskModel->getTasks();
 while ($row = mysqli_fetch_assoc($tasks)) {
@@ -20,6 +20,6 @@ while ($row = mysqli_fetch_assoc($tasks)) {
         header("Location: /hospital/index.php");
         exit;
     } else {
-        alert("Error inicio de sesion")
+       
     }
 }

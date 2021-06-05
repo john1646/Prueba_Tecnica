@@ -1,4 +1,7 @@
 <?php include_once("/opt/lampp/htdocs/hospital/static/header.php") ?>
+
+<!--Envio de datos del formulario a create_task.php en carpeta views-->
+<!--Validacion js y php antes de ingreso a DB-->
 <body>
     <div class="container">
     <div class="1">

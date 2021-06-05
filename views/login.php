@@ -40,16 +40,14 @@
         <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
         <label for="floatingInput">Direccion Email</label>
       </div>
-      <div class="form-floating">
+      <div class="form-floating mt-2">
         <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
         <label for="floatingPassword">Contrasena</label>
       </div>
-      <div class="checkbox mb-3">
-        
-      </div>
+   
       <button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Sign in</button>
       <!-- <button class="w-100 btn btn-lg btn-primary" href="" type="button">Back</button> -->
-     <a href="/hospital/index.php" class="w-100 btn btn-lg btn-primary mb-2"  role="button">Register</a>
+     <a href="/hospital/views/register_user.php" class="w-100 btn btn-lg btn-primary mb-2"  role="button">Register</a>
      <a href="/hospital/index.php" class="w-100 btn btn-lg btn-primary "  role="button">Back</a>
       <p class="mt-5 mb-3 text-muted">&copy; 2021 Copyright: Socimedicos S.A.S</p>
     </form>

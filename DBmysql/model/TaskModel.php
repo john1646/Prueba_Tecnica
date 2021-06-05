@@ -22,7 +22,7 @@ class TaskModel
             //registros de datos
             $sql = "INSERT INTO Task (name, email, pass) VALUES ('{$fullname}','{$email}','{$pass}')";
             if ($this->db->query($sql) === true) {
-                header("Location: /cesde/labels/register_ok.php");
+                header("Location: /hospital/views/registro_ok.php");
                 exit;
             } else {
                 //formato del codigo si se presenta un error

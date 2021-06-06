@@ -11,8 +11,10 @@ class ImagesModel
         $dbConnection = new DbConnection();
         //obtengo la conexion
         $this->db = $dbConnection->connect();
+        
     }
-    public function insert($fullname, $email, $pass)
+    
+    public function insert($nom, $destino)
     {
         //validacion conexion
         if ($this->db->connect_errno) {
@@ -20,9 +22,9 @@ class ImagesModel
             exit();
         } else {
             //registros de datos
-            $sql = "INSERT INTO imagen (name, email, pass) VALUES ('{$fullname}','{$email}','{$pass}')";
+            $sql = "INSERT INTO imagen (name, imagen) VALUES ('{$nom}','{$destino}')";
             if ($this->db->query($sql) === true) {
-                header("Location: /hospital/views/registro_ok.php");
+                header("location: /hospital/views/form_images.php");;
                 exit;
             } else {
                 //formato del codigo si se presenta un error
@@ -56,9 +58,9 @@ class ImagesModel
         return $imagen;
     }
 
-    public function updateTask($id, $name, $email, $pass)
+    public function updateTask($id, $nom, $destino)
     {
-        $sql = "UPDATE imagen SET name='{$name}', email='{$email}', pass='{$pass}' WHERE id='{$id}'";
+        $sql = "UPDATE imagen SET name='{$nom}', imagen='{$destino}' WHERE id='{$id}'";
         $this->db->query($sql);
         $this->db->close();
     }

@@ -31,7 +31,13 @@
           <a class="nav-link active mx-2" aria-current="page" href="/hospital/index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link mx-2" href="#">Galeria</a>
+          <a class="nav-link mx-2" href="/hospital/views/form_images.php">Crear Imagenes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="/hospital/views/galeria.php">Ver Imagenes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="/hospital/views/List_registro.php">Usuarios Registrados</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" href="/hospital/views/login.php">Sigin</a>

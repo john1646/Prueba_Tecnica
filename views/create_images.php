@@ -1,27 +1,19 @@
 <?php
-include ("/opt/lampp/htdocs/hospital/DBmysql/connectodb/ConnectDataBase.php");
-        //objeto de conexion
-        $dbConnection = new DbConnection();
-        //obtengo la conexion
-        $this->db = $dbConnection->connect();
-    
-if(isset($_POST['guardar'])){
-    $imagen = $_FILES['imagen']['name'];
-    $nombre = $_POST['nameimage'];
+include '/opt/lampp/htdocs/hospital/DBmysql/model/ImagesModel.php';
 
-    if(isset($imagen) && $imagen != ""){
-        $tipo= $_FILES['imagen']['type'];
-        $temp = $_FILES['imagen']['tmp_name'];
-    
-        $query = "INSERT INTO imagen(imagen,nombre) VALUES('$imagen','$nombre')";
-        $resultado = mysqli_query($db,$query);
-        if($resultado){
-            move_uploaded_file($temp,'hospital/Images/uploadimages/'.$imagen);
-            $_SESSION['mensaje'] = 'Imagen subida Correctamente';            
-        }else{
-            $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
-        }
-    }
+       //recepcion de formulario form_images.php
+        $nom=$_POST["nameimage"];
+        $foto=$_FILES["foto"]["name"];
+        $ruta=$_FILES["foto"]["tmp_name"];
+        $destino="/hospital/Images/uploadimages/".$foto;
+        copy($ruta,$destino);
 
+        //validations php
+
+if (!empty($nom) || !empty($destino)) {
+    echo"validate create task";
+    $imagesModel = new ImagesModel();
+    $ImagesModel->insert($nom,$destino);
+    //se envia informacion ImagesModel.php
 }
 ?>

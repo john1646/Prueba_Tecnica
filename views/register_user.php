@@ -15,7 +15,7 @@
   </div>
   <div class="mb-3 mt-5 col-6 mx-5">
     <label for="exampleInputEmail1" class="form-label">Direccion de Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
     <div id="email" class="form-text">Tu correo no sera compartido.</div>
   </div>
   <div class="mb-3 mt-4 col-6 mx-5">

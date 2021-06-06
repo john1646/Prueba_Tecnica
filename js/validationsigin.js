@@ -11,5 +11,5 @@ function validateSiginUser(){
         alert("la contrasena debe tener minimo 8 caracteres");
         return false;
     }
-    return true;
+    //return true;
 }

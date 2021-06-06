@@ -43,7 +43,7 @@
           <a class="nav-link mx-2" href="/hospital/views/login.php">Sigin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link mx-2" href="#">Logout</a>
+          <a class="nav-link mx-2" href="/hospital/views/logout.php">Logout</a>
         </li>
         
       </ul>
